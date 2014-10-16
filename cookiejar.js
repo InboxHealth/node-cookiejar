@@ -15,7 +15,7 @@
     exports.CookieAccessInfo = CookieAccessInfo;
 
     function Cookie(cookiestr, request_domain, request_path) {
-        if (cookiestr instanceof Cookie) {
+        if (cookiestr.constructor.name ==  'Cookie') {
             return cookiestr;
         }
         if (this instanceof Cookie) {
